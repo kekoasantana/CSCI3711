@@ -1,0 +1,20 @@
+2. a and b are not pointers in the function argument so the function would be 
+returning a regular int rather than a pointer.
+
+3. ptr is a pointer so there is a improper conversion from int* to int. 
+change it to scanf("%d", *ptr);
+
+4. (a) a pointer to an int
+(b) a const int, so cant change the int variable
+(c) a pointer to a const int, you can change the pointer but not the int that
+the variable points to 
+(d) a const pointer to a non const int 
+you can modify the data it points to but not the pointer itself
+(e) a const pointer to a const int, you can't modify either
+
+5. The & returns a pointer to a variable and the * does the opposite.
+
+6. const int* a is a pointer to a const int so you can change the pointer 
+but not the int variable it points to
+int* const b is a const pointer to a non const int, you can modify the data 
+it points to but not the pointer
