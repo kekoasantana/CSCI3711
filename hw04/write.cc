@@ -1,12 +1,15 @@
 #include "write.h"
 
-unsigned char* write(unsigned char* array, char* file) {
+void write(const char* file, char* ppmIndicator, int width, int height, int max, unsigned char* array) {
 	FILE* fp = fopen(file, "wb");
 	
-	array = new unsigned char[1271400];
-	fprintf(array, sizeof(char), 1271400, fp);
+	fprintf(fp, "%s\n", ppmIndicator);
+	fprintf(fp, "%d\n%d\n", width, height);
+	fprintf(fp, "%d\n", max);
+	
+	int size = width * height * 3;
+	
+	fwrite(array, sizeof(char), size, fp);
 	
 	fclose(fp);
-	
-	return array;
 }

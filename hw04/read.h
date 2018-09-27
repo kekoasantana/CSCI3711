@@ -3,6 +3,6 @@
 
 #include <stdio.h>
 
-unsigned char* read(char* file, char* ppmIndicator, int* width, int* height, int* maximum, char* nextLine);
+unsigned char* read(const char* file, char* ppmIndicator, int* width, int* height, int* maximum);
 
 #endif
