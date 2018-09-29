@@ -1,0 +1,11 @@
+1. The problem with two dimensional arrays in C++ is that when you pass a 2D array in a function as
+a parameter, you have to specify the dimensions of the array.
+
+2. One way is to store data into a one dimensional array and then acess the data by computing the offset
+into the array. Another way is the "Numerical Recipes trick" which uses a flat array and an array of pointers.
+The first array is the array of pointers and it is a pointer to a pointer to an int. The second array is 
+the flat array and it is going to hold all the data. Then you need a loop to sets all the other elements 
+of the array of pointers. 
+
+3. My computer is little endian. I wrote a short program to determine whether it was big endian or little
+endian and I posted the program called littleEndian.cc.
