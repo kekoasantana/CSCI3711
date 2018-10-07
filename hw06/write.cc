@@ -6,7 +6,7 @@ void writeJPEG(const char* file, int width, int height, int quality, unsigned ch
 	
 	struct jpeg_error_mgr jerr;
 	
-	FILE* fp;
+	FILE* fp = fopen(file, "wb");
 	JSAMPROW row_pointer[1];
 	int row_stride;
 	
