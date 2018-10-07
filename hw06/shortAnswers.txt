@@ -1,0 +1,6 @@
+1. Libraries are good because they are prewritten code that we can use so that we are not "reinventing the wheel" so to speak.
+It speeds up time for writing programs.
+
+2. The two kinds of libraries are static libraries and shared object libraries. Static libraries 
+are linked and their object files become part of the executable. Shared object libraries, or 
+dynamic linked libraries remain separate but the machine code is loaded by the executable at runtime.
