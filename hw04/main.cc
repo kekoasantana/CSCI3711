@@ -6,7 +6,7 @@
 
 int main(int argc, char** argv) {
 	char file1[25] = "test.ppm";
-	char file2[25] = "newPPM.txt";
+	char file2[25] = "newImage.ppm";
 	char ppmIndicator[5] = "\0";
 	char nextLine[10] = "\0";
 	int width = -1;
@@ -15,4 +15,5 @@ int main(int argc, char** argv) {
 	
 	unsigned char* array = read(file1, ppmIndicator, &width, &height, &maximum);
 	write(file2, ppmIndicator, width, height, maximum, array);
+	delete array;
 }
