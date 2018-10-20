@@ -1,0 +1,26 @@
+1. missing a semi-colon at the end of the class declaration.
+
+2. this.x and this.y should be this->x and this->y because 
+the this keyword is a pointer in c++ so it must be dereferenced
+and the -> will dereference it. Another error is that it should be
+Projectile::Projectile because it belongs to the Projectile class.
+Another error is that it should be this->speed = speed; and 
+this->velocity = velocity; not x and y. You would only use x and y 
+if they were your arguments.
+
+3. (a) a non-constant method that returns a pointer to a non-constant 
+int and has a non-constant pointer to an int as an argument.
+(b) same as above, except the non-constant method returns a constant
+pointer to an int.
+(c) same as b, except the method is constant instead of non-constant.
+(d) same as c, except the pointer to the int as an argument is constant.
+(e) same as d.
+
+4. C++ strings are safer and more secure but C strings are more
+light-weight so they perform better. 
+
+5. References are automatically dereferenced, unlike pointers and 
+once you initialize a reference, you cannot change what it points to. 
+
+6. A destructor automatically deletes an object that was created
+on the stack, which avoids memory leaks. 
