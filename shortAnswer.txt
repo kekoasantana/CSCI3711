@@ -1,0 +1,31 @@
+1. The friend keyword allows the friend class to access the
+private data and methods from the class that declared it. 
+
+2. The using namespace std; statement will possibly cause name 
+collisions with other namespaces. If you put it in a header
+file, it imports that namespace into any C++ that includes the header.
+
+3. The first of the four ways is to return a reference to a class 
+member. You set the member of the class using the set() method and 
+then return that point. The second way is to return a copy of the 
+object. This is inefficient because it creates a whole new object, which
+is a copy of the object. The third way is to make the object on the heap,
+which creates a whole new object that will not be lost when the method
+returns. The last way is to use an argument and make the method void.
+This is the best way to return an argument because you can pass any 
+object as a reference into the argument and use the set() method, inside
+of that method.
+
+4. The mutable keyword will allow a variable to be modified in a 
+const method. 
+
+5. The first way is that you could have actual objects inside of a
+class. This way works nicely because it creates the objects when an instance
+of the class is created and it deletes them when that instance gets
+deleted. The second way is to use references as function arguments in 
+the constructor. This way, the references would not be owned by the class
+they would have to be created and stored somewhere outside of the class.
+The third way is using pointers in the class. This has the most flexibility
+but the most difficult memory management.
+
+6. A singleton is a class that only can have one instance ever.
