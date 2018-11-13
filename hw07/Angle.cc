@@ -58,11 +58,13 @@ Angle Angle::operator-(const Angle& angle) const {
 
 const Angle& Angle::operator+=(const Angle& angle) {
 	angleValue += angle.getAngleValue();
+	angleValue = compare(angleValue);
 	return *this;
 }
 
 const Angle& Angle::operator-=(const Angle& angle) {
 	angleValue -= angle.getAngleValue();
+	angleValue = compare(angleValue);
 	return *this;
 }
 	
@@ -76,12 +78,13 @@ Angle Angle::operator/(const Angle& angle) const {
 
 const Angle& Angle::operator*=(const Angle& angle) {
 	angleValue *= angle.getAngleValue();
-	compare(angleValue);
+	angleValue = compare(angleValue);
 	return *this;
 }
 
 const Angle& Angle::operator/=(const Angle& angle) {
 	angleValue /= angle.getAngleValue();
+	angleValue = compare(angleValue);
 	return *this;
 }
 
@@ -91,4 +94,5 @@ bool Angle::operator==(const Angle& angle) const {
 
 const Angle& Angle::operator=(const Angle& angle) {
 	this->angleValue = getAngleValue();
+	angleValue = compare(angleValue);
 }
