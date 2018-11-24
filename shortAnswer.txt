@@ -1,0 +1,26 @@
+1. Upcasting is referring to an object as though it were its superclass
+and downcasting is converting an object back to a subclass.
+
+2. You can mark a method as virtual when you want a subclass to override the 
+method, the same way you would in Java.
+
+3. Dynamic casting does not allow illegal casts. It looks at the object type
+and makes sure it is legal to cast. Static casts are less safe and will not check
+and fail if it is an illegal cast. Instead it will force the object to look like the
+type that you are trying to cast it to. Dynamic casting is slower than static casting
+so you should only use static casting if you really need the extra speed but overall
+you should use dynamic casting over static casting due to its safety. 
+
+4. You can use it when you have a const version and a non-const version of a get
+method. Instead of using two different methods, you can use a const class inside of
+the const method to get the non-const version of the method.
+
+5. In the first example, you are making a copy of a fruit object f but 
+in the second one you are taking a constant reference into the method.
+
+6. In java you use interefaces that are pretty much empty and you can use 
+them to inherit multiple classes from it. In Java you could have a getCost() 
+method in the interface but you would have to implement them in whichever
+subclasses you are making. In C++ you can make a superclass that can have 
+variables and a getCost() (or other methods) that you don't have to implement
+in the separate subclasses.
